@@ -26,7 +26,7 @@ def run():
         smtp.send(msg_kwargs, __opts__)
         return {}
 
-    url_check = sns['SigningCertURL'].replace('https://', '')
+    url_check = sns['SigningCertUrl'].replace('https://', '')
     url_comps = url_check.split('/')
     if not url_comps[0].endswith('.amazonaws.com'):
         # The expected URL does not seem to come from Amazon, do not try to
